@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Redressed&family=Patrick+Hand&display=swap');
+
+*{
+    font-family: 'Redressed', cursive;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:  hsl(235, 16%, 14%);  
+    min-height: 100vh;
+
+
+}
+main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    /* align-items: center; */
+    color: #9fb0ff;
+    background: url("bg-stars.svg");
+    justify-content: space-between;
+    padding: .4rem 4rem;
+    position: relative;
+
+}
+.text{
+    margin: 3rem;
+    text-align: center;
+}
+.text h2{
+    font-size: 4rem;
+    text-shadow: 2px 3px 4px #00000080;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.listen{
+    width: 370px;
+    height: 370px;
+}
+.bg-music{
+    position: absolute;
+    right: 10px;
+    top: 2%;
+    width: 140px;
+    height: 40px;
+    opacity: .56;
+}
+#note1{
+    animation: music 1s ease alternate infinite;
+    /* transform-origin: bottom; */
+}
+#halfnote1{
+    animation: music .8s .4s ease alternate infinite;
+}
+#halfnote2{
+    animation: music .75s .8s ease alternate infinite;
+}
+#note2{
+    animation: music .7s 1.2s ease alternate infinite;
+}
+
+@keyframes music{
+    0%{
+       transform: translate(0%, -2%);
+    }
+   100%{
+       transform:none;
+       opacity: 1;
+   }
+}
+
+@media screen and (max-width:640px){
+    body{
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+    main{
+        padding: 0rem .3rem;
+        align-items: center;
+         height: 95%;
+    }
+    .listen{
+        width: 240px;
+        height: 240px;
+    }
+    .text h2{
+        font-size: 2.3rem;
+    }
+    .text{
+        margin: 3rem 0 0 0;
+    }
+    .bg-music{
+        top: 0;
+    }
+
+}
